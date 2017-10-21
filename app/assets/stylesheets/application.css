@@ -44,3 +44,52 @@ footer {
   font-weight: bold; 
   letter-spacing: 0.15em; 
 } 
+
+/* search */ 
+.search { 
+  margin-bottom: 20px; 
+} 
+.search .input-group{
+  margin: 5px;
+}
+ 
+/* course */ 
+.course .media {
+  margin: 5px;
+  padding: 10px;
+  border: solid 1px #808080;
+  border-radius: 10px;
+}
+.course .media-left img{ 
+  height: 80px; 
+  width: 115px; 
+} 
+.course .media-body { 
+  height: 80px; 
+} 
+p.course-title { 
+  /* 文の行数を1行に保ち、最後に ... を追加するスタイル */ 
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 1; 
+  overflow: hidden; 
+}
+p.course-address { 
+  /* 文の行数を2行に保ち、最後に ... を追加するスタイル */ 
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 2; 
+  overflow: hidden; 
+}
+
+/*coursedetail*/
+.coursedetail .media-left img{
+  margin-bottom: 10px;
+  height: 240px; 
+  width: 320px; 
+}
+
+.coursedetail .score {
+  margin-top: 30px;
+  text-align: center
+}

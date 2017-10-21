@@ -1,0 +1,36 @@
+<div class="coursedetail">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4><%= @name %></h4>
+		</div>
+		<div class="panel-body">
+			<div class= "media">
+				<div class="media-left">
+					<img src="<%= @image_url %>" alt="">
+					<p class="rakutenGORA"><%= link_to '楽天GORAへ', @url, class: 'btn btn-warning btn-block' %></p>
+					<p class="scoreregister"><a href="" class='btn btn-success btn-block'>スコア登録</a></p>			
+				</div>	
+				<div class="media-body">
+					<p class="address">所在地: <%= @address %></p>
+					<p class="description"><%= @description %></p>
+					<div class="score">	
+						<div class="row">
+							<div class="col-sm-offset-2 col-sm-4">
+								<div class="panel panel-default">
+									<p class="panel-heading">平均スコア</p>
+									<p class="panel-body">XXX</p>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="panel panel-default">
+									<p class="panel-heading">ベストスコア</p>
+									<p class="panel-body">XXX</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

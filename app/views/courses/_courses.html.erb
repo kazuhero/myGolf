@@ -1,0 +1,21 @@
+<% if courses %> 
+  <div class="row"> 
+    <% courses.each do |course| %> 
+      <div class="course">	
+				<div class="col-md-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+	      	<div class="media"> 
+	          <div class="media-left"> 
+	            <img src="<%= course.image_url %>" alt="" >  
+	          </div> 
+	          <div class="media-body"> 
+	            <p class="course-title">
+	            	<a href=courses_path?keyword=<%= course.name %>&latitude=<%= course.latitude %>&longitude=<%= course.longitude %>><%= course.name %></a>
+	            </p> 
+	            <p class="course-address"><%= course.address %></p> 
+	          </div> 
+	      	</div>
+	      </div>
+      </div>
+    <% end %> 
+  </div> 
+<% end %> 
