@@ -23,7 +23,7 @@ class MasterscoresController < ApplicationController
 	  @masterscore = current_user.masterscores.build(masterscore_params)
     binding.pry
 
-    if @masterscore.save 
+    if @masterscore.save!
       flash[:success] = 'スコアを登録しました。' 
       redirect_to user_path(id: current_user.id)
     else 
@@ -36,7 +36,7 @@ class MasterscoresController < ApplicationController
   private 
  
   def masterscore_params 
-    params.require(:masterscore).permit(:user_id, :course_code, :total_score, :date, scores_attributes: [:hole_no, :hole_score]) 
+    params.require(:masterscore).permit(:user_id, :course_code, :total_score, :date, scores_attributes: [:masterscore_id, :hole_no, :hole_score]) 
   end 
 	
 end
