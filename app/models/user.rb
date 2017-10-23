@@ -6,4 +6,9 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
 
   has_secure_password 
+  
+  has_many :scores
+  has_many :masterscores
+  has_many :user_scores, through: :masterscores, source: :score
+  
 end

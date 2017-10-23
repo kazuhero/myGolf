@@ -93,3 +93,16 @@ p.course-address {
   margin-top: 30px;
   text-align: center
 }
+
+/*masterscore*/
+.masterscore table{
+  table-layout: fixed;
+}
+
+.masterscore th{
+  text-align: center;
+}
+
+.masterscore td{
+  text-align: center;
+}

@@ -8,7 +8,7 @@
 				<div class="media-left">
 					<img src="<%= @image_url %>" alt="">
 					<p class="rakutenGORA"><%= link_to '楽天GORAへ', @url, class: 'btn btn-warning btn-block' %></p>
-					<p class="scoreregister"><a href="" class='btn btn-success btn-block'>スコア登録</a></p>			
+					<p class="scoreregister"><%= link_to 'スコア登録', new_masterscore_path(name: @name, url: @url), class: 'btn btn-success btn-block' %></p>			
 				</div>	
 				<div class="media-body">
 					<p class="address">所在地: <%= @address %></p>

@@ -1,0 +1,81 @@
+<div class="masterscore">
+	<%= form_for(@masterscore) do |f| %> 
+		<div class="row">
+			<table class="table table-bordered">
+				<tr>
+					<th>プレー日</th>
+					<th>コース</th>
+					<th>スコア</th>
+				</tr>
+				<tr>
+					<td class="form-group">
+						<%= f.date_field :date, class: "form-control", placeholder: "yyyy/mm/dd" %>
+					</td>
+					<td><a href="<%= @url %>"><%= @name %></a></td>
+					<td>
+						<%= f.number_field :total_score, class: "form-control" %>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="row">
+			<table class="table table-bordered">
+				<tr class="info">
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+					<th>7</th>
+					<th>8</th>
+					<th>9</th>
+					<th>total</th>
+				</tr>
+				<tr>
+					<td><input type="number" class="form-control" id="score01"></td>
+					<td><input type="number" class="form-control" id="score02"></td>
+					<td><input type="number" class="form-control" id="score03"></td>
+					<td><input type="number" class="form-control" id="score04"></td>
+					<td><input type="number" class="form-control" id="score05"></td>
+					<td><input type="number" class="form-control" id="score06"></td>
+					<td><input type="number" class="form-control" id="score07"></td>
+					<td><input type="number" class="form-control" id="score08"></td>
+					<td><input type="number" class="form-control" id="score09"></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<div class="row">
+			<table class="table table-bordered">
+				<tr class="info">
+					<th>10</th>
+					<th>11</th>
+					<th>12</th>
+					<th>13</th>
+					<th>14</th>
+					<th>15</th>
+					<th>16</th>
+					<th>17</th>
+					<th>18</th>
+					<th>total</th>
+				</tr>
+				<tr>
+					<td><input type="number" class="form-control" id="score10"></td>
+					<td><input type="number" class="form-control" id="score11"></td>
+					<td><input type="number" class="form-control" id="score12"></td>
+					<td><input type="number" class="form-control" id="score13"></td>
+					<td><input type="number" class="form-control" id="score14"></td>
+					<td><input type="number" class="form-control" id="score15"></td>
+					<td><input type="number" class="form-control" id="score16"></td>
+					<td><input type="number" class="form-control" id="score17"></td>
+					<td><input type="number" class="form-control" id="score18"></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<%#= f.hidden_field :user_id, @masterscore.user.id %>
+		<%#= f.hidden_field :course_id, @masterscore.course.id %>
+		<%= f.submit 'スコア登録', class: 'btn btn-primary' %> 
+	<% end %>
+</div>

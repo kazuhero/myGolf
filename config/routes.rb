@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :new, :create]
   
   resources :courses, only: [:show, :new] 
-
+  resources :masterscores
+  resources :scores
+  
 end

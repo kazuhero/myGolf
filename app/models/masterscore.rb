@@ -1,5 +1,10 @@
 class Masterscore < ApplicationRecord
   belongs_to :user
   belongs_to :course
-  belongs_to :score
+  
+  validates :user_id, presence: true
+  validates :course_id, presence: true
+  
+  has_many :scores
+
 end

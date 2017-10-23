@@ -7,4 +7,9 @@ class Course < ApplicationRecord
   validates :image_url, presence: true, length: { maximum: 255 } 
   validates :latitude, presence: true
   validates :longitude, presence: true
+  
+  has_many :scores
+  has_many :masterscores
+  has_many :course_scores, through: :masterscores, source: :score
+  
 end
