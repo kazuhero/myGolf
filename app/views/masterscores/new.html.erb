@@ -18,9 +18,12 @@
 				</tr>
 			</table>
 		</div>
+		
 		<div class="row">
+		<div class="table-responsive">
 			<table class="table table-bordered">
 				<tr class="info">
+					<th>ホール</th>
 					<th>1</th>
 					<th>2</th>
 					<th>3</th>
@@ -30,23 +33,41 @@
 					<th>7</th>
 					<th>8</th>
 					<th>9</th>
-					<th>total</th>
+					<th>10</th>
+					<th>11</th>
+					<th>12</th>
+					<th>13</th>
+					<th>14</th>
+					<th>15</th>
+					<th>16</th>
+					<th>17</th>
+					<th>18</th>
 				</tr>
 				<tr>
-					<td><input type="number" class="form-control" id="score01"></td>
-					<td><input type="number" class="form-control" id="score02"></td>
-					<td><input type="number" class="form-control" id="score03"></td>
-					<td><input type="number" class="form-control" id="score04"></td>
-					<td><input type="number" class="form-control" id="score05"></td>
-					<td><input type="number" class="form-control" id="score06"></td>
-					<td><input type="number" class="form-control" id="score07"></td>
-					<td><input type="number" class="form-control" id="score08"></td>
-					<td><input type="number" class="form-control" id="score09"></td>
-					<td></td>
+					<td>スコア</td>
+					<%= f.fields_for :scores do |scores_form| %>
+						<td>
+							<%= scores_form.hidden_field :hole_no, :value => scores_form.index+1 %>
+							<%= scores_form.number_field :hole_score, class: "form-control" %>
+						</td>
+					<% end %>
+						
+						<!--<td><input type="number" class="form-control" id="score01"></td>
+						<td><input type="number" class="form-control" id="score02"></td>
+						<td><input type="number" class="form-control" id="score03"></td>
+						<td><input type="number" class="form-control" id="score04"></td>
+						<td><input type="number" class="form-control" id="score05"></td>
+						<td><input type="number" class="form-control" id="score06"></td>
+						<td><input type="number" class="form-control" id="score07"></td>
+						<td><input type="number" class="form-control" id="score08"></td>
+						<td><input type="number" class="form-control" id="score09"></td>
+						<td></td>-->
+					
 				</tr>
 			</table>
 		</div>
-		<div class="row">
+		</div>
+		<!--<div class="row">
 			<table class="table table-bordered">
 				<tr class="info">
 					<th>10</th>
@@ -73,9 +94,9 @@
 					<td></td>
 				</tr>
 			</table>
-		</div>
-		<%#= f.hidden_field :user_id, @masterscore.user.id %>
-		<%#= f.hidden_field :course_id, @masterscore.course.id %>
+		</div>-->
+	
+		<%= f.hidden_field :course_code, :value => @course_code %>
 		<%= f.submit 'スコア登録', class: 'btn btn-primary' %> 
 	<% end %>
 </div>

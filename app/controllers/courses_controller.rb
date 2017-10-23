@@ -8,6 +8,7 @@ class CoursesController < ApplicationController
     
     course = Course.new(read(result.first)) 
 
+    @course_code = course.course_code
     @name = course.name
     @address = course.address
     @description = course.description

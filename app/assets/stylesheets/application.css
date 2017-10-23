@@ -101,6 +101,7 @@ p.course-address {
 
 .masterscore th{
   text-align: center;
+  width: 75px;
 }
 
 .masterscore td{
