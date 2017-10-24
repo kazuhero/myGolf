@@ -5,26 +5,32 @@
 		</div>
 		<div class="panel-body">
 			<div class= "media">
-				<div class="media-left">
-					<img src="<%= @image_url %>" alt="">
-					<p class="rakutenGORA"><%= link_to '楽天GORAへ', @url, class: 'btn btn-warning btn-block' %></p>
-					<p class="scoreregister"><%= link_to 'スコア登録', new_masterscore_path(name: @name, url: @url, course_code: @course_code), class: 'btn btn-success btn-block' %></p>			
-				</div>	
-				<div class="media-body">
-					<p class="address">所在地: <%= @address %></p>
-					<p class="description"><%= @description %></p>
-					<div class="score">	
-						<div class="row">
-							<div class="col-sm-offset-2 col-sm-4">
-								<div class="panel panel-default">
-									<p class="panel-heading">平均スコア</p>
-									<p class="panel-body"><%= @average %></p>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="panel panel-default">
-									<p class="panel-heading">ベストスコア</p>
-									<p class="panel-body"><%= @best %></p>
+				<div class="row">
+					<div class="col-sm-3 col-md-3">
+						<div class="media-left">
+							<img src="<%= @image_url %>" alt="">
+							<p class="rakutenGORA"><%= link_to '楽天GORAへ', @url, class: 'btn btn-warning btn-block' %></p>
+							<p class="scoreregister"><%= link_to 'スコア登録', new_masterscore_path(name: @name, url: @url, course_code: @course_code), class: 'btn btn-success btn-block' %></p>			
+						</div>	
+					</div>
+					<div class="col-sm-offset-3 col-sm-6 col-md-offset-2 col-md-7 col-lg-offset-1 col-lg-8">
+						<div class="media-body">
+							<p class="address">所在地: <%= @address %></p>
+							<p class="description"><%= @description %></p>
+							<div class="score">	
+								<div class="row">
+									<div class="col-sm-offset-2 col-sm-4">
+										<div class="panel panel-default">
+											<p class="panel-heading">平均スコア</p>
+											<p class="panel-body"><%= @average %></p>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="panel panel-default">
+											<p class="panel-heading">ベストスコア</p>
+											<p class="panel-body"><%= @best %></p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
