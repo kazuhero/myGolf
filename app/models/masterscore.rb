@@ -15,7 +15,7 @@ class Masterscore < ApplicationRecord
   validates :course_code, presence: true
   validates :course_name, presence: true
   
-  has_many :scores, inverse_of: :masterscore
+  has_many :scores, inverse_of: :masterscore, dependent: :destroy
   accepts_nested_attributes_for :scores, allow_destroy: true
   
 
