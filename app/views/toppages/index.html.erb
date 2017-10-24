@@ -1,12 +1,11 @@
 <% content_for :cover do %> 
   <% unless logged_in? %>
     <div class="cover"> 
-      <div class="cover-inner"> 
-        <div class="cover-contents"> 
-            <%= link_to 'ログイン', login_path, class: 'btn btn-success btn-lg' %> 
-        </div> 
+      <div class="cover-image">
+      </div>
+      <div class="login-button"> 
+          <%= link_to 'ログイン', login_path, class: 'btn btn-success btn-lg' %> 
       </div> 
-    </div> 
   <% end %>
 <% end %> 
  

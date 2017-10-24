@@ -15,6 +15,18 @@ class CoursesController < ApplicationController
     @url = course.url
     @image_url = course.image_url
     
+    @masterscores = Masterscore.where(course_code: @course_code)
+    
+    if @masterscores.count > 0
+      @average = @masterscores.average(:total_score).round(1)
+      @best = @masterscores.minimum(:total_score)
+    else
+      @average = '-'
+      @best = '-'
+    end
+    
+    
+    
   end
   
   def new
@@ -26,12 +38,12 @@ class CoursesController < ApplicationController
     results = RakutenWebService::Gora::Course.search({ 
       keyword: @keyword, 
       areaCode: @area, #未入力の場合は0:全都道府県で検索される
-      hits: 20, 
+      hits: 30, 
     }) 
    
     results.each do |result| 
       # 扱い易いように Course としてインスタンスを作成する（保存はしない） 
-      course = Course.new(read(result)) 
+      course = Course.new(read(result))
       @courses << course
     end
 

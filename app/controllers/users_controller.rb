@@ -7,6 +7,16 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @masterscores = Masterscore.where(user_id: params[:id])
+    
+    if @masterscores.count > 0
+      @average = @masterscores.average(:total_score).round(1)
+      @best = @masterscores.minimum(:total_score)
+    else
+      @average = '-'
+      @best = '-'
+    end
+
+
   end
 
   def new
