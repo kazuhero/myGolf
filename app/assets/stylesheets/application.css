@@ -107,3 +107,16 @@ p.course-address {
 .masterscore td{
   text-align: center;
 }
+
+/* user-profile*/
+.user-profile .score-statistic {
+  text-align: center;
+}
+
+.user-profile .score-list th {
+  text-align: center;
+}
+
+.user-profile .score-list td {
+  text-align: center;
+}

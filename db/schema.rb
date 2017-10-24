@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171021064313) do
+ActiveRecord::Schema.define(version: 20171023150434) do
 
   create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "course_code"
@@ -27,12 +27,12 @@ ActiveRecord::Schema.define(version: 20171021064313) do
 
   create_table "masterscores", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
-    t.integer  "course_id"
     t.integer  "total_score"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.date     "date"
-    t.index ["course_id"], name: "index_masterscores_on_course_id", using: :btree
+    t.string   "course_code"
+    t.string   "course_name"
     t.index ["user_id"], name: "index_masterscores_on_user_id", using: :btree
   end
 
@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 20171021064313) do
     t.integer  "hole_score"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.integer  "Masterscore_id"
-    t.index ["Masterscore_id"], name: "index_scores_on_Masterscore_id", using: :btree
+    t.integer  "masterscore_id"
+    t.index ["masterscore_id"], name: "index_scores_on_Masterscore_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -53,6 +53,5 @@ ActiveRecord::Schema.define(version: 20171021064313) do
     t.datetime "updated_at",      null: false
   end
 
-  add_foreign_key "masterscores", "courses"
   add_foreign_key "masterscores", "users"
 end

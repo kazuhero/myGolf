@@ -11,9 +11,9 @@
 					<td class="form-group">
 						<%= f.date_field :date, class: "form-control", placeholder: "yyyy/mm/dd" %>
 					</td>
-					<td><a href="<%= @url %>"><%= @name %></a></td>
+					<td><%= @masterscore.course_name %></a></td>
 					<td>
-						<%#= f.number_field :total_score, class: "form-control" %>
+						<%= @masterscore.total_score %>
 					</td>
 				</tr>
 			</table>
@@ -56,9 +56,9 @@
 			</div>
 		</div>
 	
-		<%= f.hidden_field :total_score, :value => 0 %>
-		<%= f.hidden_field :course_code, :value => @course_code %>
-		<%= f.hidden_field :course_name, :value => @course_name %>
-		<%= f.submit 'スコア登録', class: 'btn btn-primary' %> 
+		<%= f.hidden_field :total_score, :value => @masterscore.total_score %>
+		<%= f.hidden_field :course_code, :value => @masterscore.course_code %>
+		<%= f.hidden_field :course_name, :value => @masterscore.course_name %>
+		<%= f.submit 'スコア更新', class: 'btn btn-success' %> 
 	<% end %>
 </div>

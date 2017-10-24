@@ -1,8 +1,50 @@
 <div class="user-profile"> 
+  
   <div class="icon text-center"> 
     <img src="<%= gravatar_url(@user, size: 100) %>" alt="" class="img-circle"> 
   </div> 
   <div class="name text-center"> 
     <h1><%= @user.name %></h1> 
   </div> 
+  
+  <div class="score-statistic">	
+		<div class="row">
+			<div class="col-sm-offset-4 col-sm-2">
+				<div class="panel panel-default">
+					<p class="panel-heading">平均スコア</p>
+					<p class="panel-body">XXX</p>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="panel panel-default">
+					<p class="panel-heading">ベストスコア</p>
+					<p class="panel-body">XXX</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+  <div class="score-list">
+		<div class="row">
+  		<div class="col-sm-offset-2 col-sm-8">
+  		  <table class="table table-bordered">
+    		  <tr class="info">
+    		    <th>プレー日</th>
+    		    <th>コース</th>
+    		    <th>スコア</th>
+    		    <th>スコア詳細</th>
+    		  </tr>
+    		  <% @masterscores.each do |masterscore| %>
+    		    <tr>
+      		    <td><%= masterscore.date %></td>
+      		    <td><%= masterscore.course_name %></td>
+      		    <td><%= masterscore.total_score %></td>
+      		    <td><%= link_to 'スコア詳細', masterscore_path(id: masterscore.id), class: 'btn btn-success' %></td>
+    		    </tr>
+          <% end %>
+  		  </table>
+  		</div>
+	  </div>
+  </div>
+  
 </div> 
