@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171023150434) do
+ActiveRecord::Schema.define(version: 20171024092231) do
 
   create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "course_code"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20171023150434) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.integer  "masterscore_id"
-    t.index ["masterscore_id"], name: "index_scores_on_Masterscore_id", using: :btree
+    t.index ["masterscore_id"], name: "index_scores_on_masterscore_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -54,4 +54,5 @@ ActiveRecord::Schema.define(version: 20171023150434) do
   end
 
   add_foreign_key "masterscores", "users"
+  add_foreign_key "scores", "masterscores"
 end
