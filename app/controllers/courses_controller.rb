@@ -41,10 +41,15 @@ class CoursesController < ApplicationController
       hits: 30, 
     }) 
    
-    results.each do |result| 
-      # 扱い易いように Course としてインスタンスを作成する（保存はしない） 
-      course = Course.new(read(result))
-      @courses << course
+    begin
+      results.each do |result| 
+        # 扱い易いように Course としてインスタンスを作成する（保存はしない） 
+        course = Course.new(read(result))
+        @courses << course
+      end
+    rescue => e
+      flash[:warning] = '検索条件にヒットするコースがありません。'
+      render @new
     end
 
   end
