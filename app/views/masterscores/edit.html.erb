@@ -9,7 +9,21 @@
 				</tr>
 				<tr>
 					<td class="form-group">
-						<%= f.date_field :date, class: "form-control", placeholder: "yyyy/mm/dd" %>
+						<div class='input-group date' id='datetimepicker'>
+              <%= f.text_field :date, class: "form-control", placeholder: "yyyy/mm/dd" %>
+            	<span class="input-group-addon">
+              	<span class="glyphicon glyphicon-calendar"></span>
+            	</span>
+            </div>
+            <script type="text/javascript">
+	            $(function () {
+	                $('#datetimepicker').datetimepicker({
+	                  locale: 'ja',
+	               		useCurrent: true,
+	               		format: 'YYYY/M/D'
+	                });
+	            });
+        		</script>
 					</td>
 					<td><%= @masterscore.course_name %></a></td>
 					<td>
