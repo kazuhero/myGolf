@@ -15,7 +15,7 @@
 						<div class="media-left">
 							<img src="<%= @image_url %>" alt="">
 							<p class="rakutenGORA"><%= link_to '楽天GORAへ', @url, class: 'btn btn-warning btn-block' %></p>
-							<p class="scoreregister"><%= link_to 'スコア登録', new_masterscore_path(name: @name, url: @url, course_code: @course_code), class: 'btn btn-success btn-block' %></p>			
+							<p class="scoreregister"><%= link_to 'スコア登録', new_masterscore_path(name: @name, course_code: @course_code), class: 'btn btn-success btn-block' %></p>			
 						</div>	
 					</div>
 					<div class="col-sm-offset-3 col-sm-6 col-md-offset-2 col-md-7 col-lg-offset-1 col-lg-8">

@@ -102,6 +102,14 @@ p.course-address {
   text-align: center;
 }
 
+/*.masterscore .alt-table-responsive {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+}*/
+
 /* user-profile*/
 .user-profile .score-statistic {
   text-align: center;
