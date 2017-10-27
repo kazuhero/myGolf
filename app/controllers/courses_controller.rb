@@ -5,7 +5,7 @@ class CoursesController < ApplicationController
     @course = []
     
     result = RakutenWebService::Gora::Course.search(keyword: params[:keyword], latitude: params[:latitude], longitude: params[:longitude], searchRadius: 10) 
-    
+
     course = Course.new(read(result.first)) 
 
     @course_code = course.course_code

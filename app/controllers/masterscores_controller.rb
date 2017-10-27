@@ -13,11 +13,10 @@ class MasterscoresController < ApplicationController
 		@masterscore = Masterscore.new
 		18.times {@masterscore.scores.build}
 		
-		@name = params[:name]
 		@url = params[:url]
 		@course_code = params[:course_code]
 		@course_name = params[:name]
-		
+
 	end
 	
 	def create

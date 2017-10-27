@@ -1,3 +1,8 @@
+<ol class="breadcrumb">
+	<li><a href="/">myGolf</a></li>
+	<li class="active">スコア登録</li>
+</ol>
+
 <div class="masterscore">
 	<%= form_for(@masterscore) do |f| %> 
 		<div class="row">
@@ -25,7 +30,7 @@
 	            });
         		</script>
 					</td>
-					<td><a href="<%= @url %>"><%= @name %></a></td>
+					<td><a href="<%= @url %>"><%= @course_name %></a></td>
 					<td></td>
 				</tr>
 			</table>

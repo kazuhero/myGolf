@@ -1,3 +1,10 @@
+<ol class="breadcrumb">
+	<li><a href="/">myGolf</a></li>
+	<li><a href="/users/<%= @masterscore.user_id %>">ユーザ詳細</a></li>
+	<li><a href="/masterscores/<%= @masterscore.id %>">スコア詳細</a></li>
+	<li class="active">スコア編集</a></li>
+</ol>
+
 <div class="masterscore">
 	<%= form_for(@masterscore) do |f| %> 
 		<div class="row">
