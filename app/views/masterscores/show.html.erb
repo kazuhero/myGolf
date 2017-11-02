@@ -5,52 +5,56 @@
 </ol>
 
 <div class="masterscore">
-	<div class="row">
-		<table class="table table-bordered">
-			<tr class="info">
-				<th>プレー日</th>
-				<th>コース</th>
-				<th>スコア</th>
-			</tr>
-			<tr>
-				<td><%= @masterscore.date %></td>
-				<td><%= @masterscore.course_name %></td>
-				<td><%= @masterscore.total_score %></td>
-			</tr>
-		</table>
-	</div>
-		
-	<div class="row">
-		<div class="table-responsive">
+	<div id="overview">
+		<div class="row">
 			<table class="table table-bordered">
 				<tr class="info">
-					<th>ホール</th>
-					<th>1</th>
-					<th>2</th>
-					<th>3</th>
-					<th>4</th>
-					<th>5</th>
-					<th>6</th>
-					<th>7</th>
-					<th>8</th>
-					<th>9</th>
-					<th>10</th>
-					<th>11</th>
-					<th>12</th>
-					<th>13</th>
-					<th>14</th>
-					<th>15</th>
-					<th>16</th>
-					<th>17</th>
-					<th>18</th>
+					<th>プレー日</th>
+					<th>コース</th>
+					<th>スコア</th>
 				</tr>
 				<tr>
-					<td>スコア</td>
-					<% @scores.each do |score| %>
-						<td><%= score.hole_score %></td>
-					<% end %>
+					<td><%= @masterscore.date %></td>
+					<td><%= @masterscore.course_name %></td>
+					<td><%= @masterscore.total_score %></td>
 				</tr>
 			</table>
+		</div>
+	</div>
+	
+	<div id="detail">	
+		<div class="row">
+			<div class="table-responsive">
+				<table class="table table-bordered">
+					<tr class="info">
+						<th>ホール</th>
+						<th>1</th>
+						<th>2</th>
+						<th>3</th>
+						<th>4</th>
+						<th>5</th>
+						<th>6</th>
+						<th>7</th>
+						<th>8</th>
+						<th>9</th>
+						<th>10</th>
+						<th>11</th>
+						<th>12</th>
+						<th>13</th>
+						<th>14</th>
+						<th>15</th>
+						<th>16</th>
+						<th>17</th>
+						<th>18</th>
+					</tr>
+					<tr>
+						<td>スコア</td>
+						<% @scores.each do |score| %>
+							<td><%= score.hole_score %></td>
+						<% end %>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</div>
 

@@ -93,7 +93,7 @@ p.course-address {
   table-layout: fixed;
 }
 
-.masterscore th{
+.masterscore #overview th{
   text-align: center;
   width: 75px;
 }
@@ -102,13 +102,38 @@ p.course-address {
   text-align: center;
 }
 
-/*.masterscore .alt-table-responsive {
+@media screen and (min-width:481px) { 
+  .masterscore #detail th{
+    text-align: center;
+    width: 75px;
+  }
+  
+}
+
+@media screen and (max-width:480px) { 
+  .masterscore #detail table{
     width: 100%;
-    overflow-y: hidden;
-    overflow-x: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    -webkit-overflow-scrolling: touch;
-}*/
+  }
+  
+  .masterscore #detail th{
+    text-align: center;
+    height: 45px;
+    width: 100%;
+    display: block;
+  }
+  
+  .masterscore #detail td{
+    height: 45px;
+    width: 100%;
+    display: block;
+  }
+  
+  .masterscore #detail tr{
+    width: 50%;
+    display: inline-block;
+  }
+  
+}
 
 /* user-profile*/
 .user-profile .score-statistic {
