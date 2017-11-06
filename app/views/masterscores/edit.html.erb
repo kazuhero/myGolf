@@ -72,7 +72,7 @@
 							<%= f.fields_for :scores do |scores_form| %>
 								<td>
 									<%= scores_form.hidden_field :hole_no, :value => scores_form.index+1 %>
-									<%= scores_form.number_field :hole_score, class: "form-control" %>
+									<%= scores_form.number_field :hole_score, class: "form-control score" %>
 								</td>
 							<% end %>
 						</tr>

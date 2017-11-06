@@ -117,20 +117,24 @@ p.course-address {
   
   .masterscore #detail th{
     text-align: center;
-    height: 45px;
     width: 100%;
+    height: 40px;
     display: block;
   }
   
   .masterscore #detail td{
-    height: 45px;
     width: 100%;
+    height: 40px;
     display: block;
   }
   
   .masterscore #detail tr{
     width: 50%;
     display: inline-block;
+  }
+  
+  .masterscore .score{
+    height: 30px;
   }
   
 }
